@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Contact Us{% endblock title %}
+
+{% block extra_css %}
+  <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+{% endblock %}
+
+{% block body %}
+<section class="contact-page">
+  <div class="contact-intro">
+    <p class="contact-eyebrow">WE’RE HERE TO HELP</p>
+    <h1>Drop us a line</h1>
+    <p>Tell us a little about what you need and we’ll get back to you.</p>
+  </div>
+
+  <div class="contact-layout">
+    <form class="contact-form" method="post" action="/contact">
+      {% csrf_token %}
+
+      <div class="form-field">
+        <label for="name">Full name</label>
+        <input id="name" name="name" type="text" placeholder="What’s your full name?" autocomplete="name" required>
+      </div>
+
+      <div class="form-field">
+        <label for="email">Email address</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+      </div>
+
+      <div class="form-field">
+        <label for="desc">Message</label>
+        <textarea id="desc" name="desc" rows="5" placeholder="Write your message for the team here" required></textarea>
+      </div>
+
+      <button class="contact-submit" type="submit">Send message <span aria-hidden="true">→</span></button>
+      <p class="form-note">We’ll only use your details to respond to your message.</p>
+    </form>
+
+    <aside class="contact-aside">
+      <div class="aside-mark" aria-hidden="true">M</div>
+      <h2>Looking for something in particular?</h2>
+      <p>Whether you have a question, need a hand, or want to work with us, send us a message and we’ll point you in the right direction.</p>
+      <div class="aside-rule"></div>
+      <p class="aside-caption">A good conversation starts with a hello.</p>
+    </aside>
+  </div>
+</section>
+{% endblock body %}

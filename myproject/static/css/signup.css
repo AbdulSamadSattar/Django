@@ -1,0 +1,57 @@
+.cl-register01__brand {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 40px clamp(24px, 4vw, 56px);
+    overflow: hidden;
+    background: radial-gradient(60% 50% at 90% 10%, rgba(99, 102, 241, .55), transparent 70%), radial-gradient(50% 40% at 0% 100%, rgba(198, 244, 50, .25), transparent 70%), #10131a;
+    color: #f4f6fb;
+}
+.cl-register01 *, .cl-register01 *::before, .cl-register01 *::after {
+    box-sizing: border-box;
+}
+:where(html) :is(html,body,div,span,p,a,h1,h2,h3,h4,h5,h6,label,input,select,option,optgroup,textarea,button,form,fieldset,legend,ul,ol,li,dl,dt,dd,figure,figcaption,section,article,header,footer,nav,main,aside,strong,b,em,i,small,sub,sup,blockquote,pre,code,picture,progress,output,summary,details,address,abbr,mark), :is(html, body) {
+    all: revert;
+}
+user agent stylesheet
+aside {
+    display: block;
+    unicode-bidi: isolate;
+}
+.cl-register01 {
+    --cl-register01-ink: #10131a;
+    --cl-register01-muted: #4e5563;
+    --cl-register01-line: #e3e6ec;
+    --cl-register01-field: #cdd2db;
+    --cl-register01-lime: #c6f432;
+    --cl-register01-accent: #4338ca;
+    --cl-register01-ring: rgba(67, 56, 202, .22);
+    --cl-register01-good: #15803d;
+    --cl-register01-error: #b42318;
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+    min-height: 100vh;
+    background: #fff;
+    color: var(--cl-register01-ink);
+    line-height: 1.5;
+}
+body {
+    margin: 0;
+    background: #fff;
+    font-family: "Onest", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+.cl-register01 *, .cl-register01 *::before, .cl-register01 *::after {
+    box-sizing: border-box;
+}
+.cl-register01 *, .cl-register01 *::before, .cl-register01 *::after {
+    box-sizing: border-box;
+}
+<style>
+@font-face {
+    font-family: 'Onest';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(../fonts/onest-400-latin-ext.woff2) format('woff2');
+    unicode-range: U +0100 -02BA, U +02BD -02C5, U +02C7 -02CC, U +02CE -02D7, U +02DD -02FF, U +0304, U +0308, U +0329, U +1D00 -1DBF, U +1E00 -1E9F, U +1EF2 -1EFF, U +2020, U +20A0 -20AB, U +20AD -20C0, U +2113, U +2C60 -2C7F, U + A720-A7FF;
+}

@@ -1,0 +1,197 @@
+/* Contact page styling inspired by Marvel's clean, spacious contact page. */
+.contact-page {
+  --contact-ink: #202136;
+  --contact-muted: #707487;
+  --contact-accent: #6554e8;
+  --contact-line: #e5e6ee;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 48px 24px 96px;
+  color: var(--contact-ink);
+}
+
+.contact-intro {
+  max-width: 650px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.contact-eyebrow {
+  margin: 0 0 12px;
+  color: var(--contact-accent);
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+}
+
+.contact-intro h1 {
+  margin: 0 0 14px;
+  font-size: clamp(2.4rem, 6vw, 4.25rem);
+  font-weight: 700;
+  letter-spacing: -.055em;
+  line-height: 1.05;
+}
+
+.contact-intro > p:last-child,
+.contact-aside > p {
+  color: var(--contact-muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, .9fr);
+  overflow: hidden;
+  border: 1px solid var(--contact-line);
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 24px 70px rgba(35, 34, 72, .08);
+}
+
+.contact-form {
+  padding: 42px;
+}
+
+.form-field {
+  margin-bottom: 22px;
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--contact-ink);
+  font-size: .92rem;
+  font-weight: 600;
+}
+
+.form-field input,
+.form-field textarea {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--contact-line);
+  border-radius: 9px;
+  background: #fff;
+  color: var(--contact-ink);
+  font: inherit;
+  padding: 14px 15px;
+  transition: border-color .18s ease, box-shadow .18s ease;
+}
+
+.form-field input {
+  min-height: 51px;
+}
+
+.form-field textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: #a0a3b1;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  border-color: var(--contact-accent);
+  box-shadow: 0 0 0 3px rgba(101, 84, 232, .14);
+  outline: none;
+}
+
+.contact-submit {
+  display: inline-flex;
+  min-height: 50px;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--contact-accent);
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 650;
+  padding: 0 22px;
+  transition: background .18s ease, transform .18s ease;
+}
+
+.contact-submit:hover {
+  transform: translateY(-1px);
+  background: #5140d2;
+}
+
+.contact-submit:focus-visible {
+  outline: 3px solid rgba(101, 84, 232, .35);
+  outline-offset: 3px;
+}
+
+.form-note {
+  margin: 14px 0 0;
+  color: var(--contact-muted);
+  font-size: .82rem;
+}
+
+.contact-aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 48px;
+  background: #f5f4ff;
+}
+
+.aside-mark {
+  display: grid;
+  width: 54px;
+  height: 54px;
+  margin-bottom: 30px;
+  place-items: center;
+  border-radius: 16px;
+  background: var(--contact-accent);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 750;
+}
+
+.contact-aside h2 {
+  margin: 0 0 12px;
+  font-size: clamp(1.6rem, 3vw, 2.15rem);
+  font-weight: 700;
+  letter-spacing: -.04em;
+  line-height: 1.16;
+}
+
+.aside-rule {
+  width: 48px;
+  height: 3px;
+  margin: 22px 0 12px;
+  border-radius: 3px;
+  background: var(--contact-accent);
+}
+
+.contact-aside .aside-caption {
+  margin: 0;
+  color: var(--contact-ink);
+  font-size: .9rem;
+  font-weight: 600;
+}
+
+@media (max-width: 767px) {
+  .contact-page {
+    padding: 30px 16px 64px;
+  }
+
+  .contact-intro {
+    margin-bottom: 30px;
+    text-align: left;
+  }
+
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form,
+  .contact-aside {
+    padding: 28px 22px;
+  }
+}

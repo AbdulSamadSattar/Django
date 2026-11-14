@@ -1,0 +1,40 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Create account</title>
+  <link rel="stylesheet" href="{% static 'css/auth.css' %}">
+</head>
+<body>
+  <main class="auth-shell">
+    <aside class="auth-brand">
+      <a class="brand-logo" href="{% url 'home' %}" aria-label="Tally home"><span class="brand-mark">T</span><span>Tally</span></a>
+      <div class="brand-copy">
+        <p class="eyebrow">A calmer way to run your business</p>
+        <h2>Get paid faster, with less admin.</h2>
+        <p>Everything you need to keep your work moving and your finances clear.</p>
+        <ul class="perks"><li>Branded invoices in under a minute</li><li>Automatic reminders for late payers</li><li>Keep all your client work in one place</li></ul>
+      </div>
+      <div class="invoice-card" aria-hidden="true"><div class="invoice-top"><span>Invoice #0142</span><span class="paid">Paid</span></div><p class="invoice-client">Northbank Studio · Brand refresh</p><strong>£2,480.00</strong><div class="invoice-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><small>Paid 3 days early · 14 Sep</small></div>
+      <p class="brand-footer">Simple tools for independent people.</p>
+    </aside>
+    <section class="auth-main">
+      <div class="auth-card">
+        <h1>Create your account</h1>
+        <p class="subtitle">Start free. You can set up the rest later.</p>
+        {% if form.non_field_errors %}<div class="notice error">{{ form.non_field_errors }}</div>{% endif %}
+        <form method="post" action="{% url 'signup' %}" novalidate>
+          {% csrf_token %}
+          {% for field in form %}
+          <div class="field"><label for="{{ field.id_for_label }}">{{ field.label }}</label>{{ field }}{% if field.help_text %}<small class="help">{{ field.help_text|safe }}</small>{% endif %}{% for error in field.errors %}<small class="field-error">{{ error }}</small>{% endfor %}</div>
+          {% endfor %}
+          <button class="primary-button" type="submit">Create account</button>
+        </form>
+        <p class="auth-switch">Already have an account? <a href="{% url 'login' %}">Log in</a></p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
